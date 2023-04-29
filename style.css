@@ -1,0 +1,66 @@
+body{
+    text-align: center;
+    color:hotpink;
+    margin:0;
+}
+
+*{                  /*this asterick sign selects all elements*/
+    border:1px solid black;
+}
+
+.header,.footer{
+    background-color: thistle;
+    flex-grow:2;    /*makes it grow to size 2*/
+    min-height: 10vh;
+    
+}
+
+.nav,.aside{
+    background-color: aqua;
+    flex-grow:2;        /*makes it grow to size 2*/
+    min-height: 5vh;
+}
+
+.aside{
+    display:none;   /*this removes the aside column from webpage*/
+}
+
+.main{
+    background-color: peachpuff;
+    flex-grow:5;        /*makes it grow to size 5*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main div{
+    margin-top: 10px;
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    height:100vh;       /*makes all the items display on 100% of screen*/
+    flex-direction:column;
+}
+
+
+@media(min-width:600px){
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap; /*need the wrap to make page header and footer ahve the whole row to itself*/
+    }
+    .header,.footer{
+        width:100vw;        /*makes view width of the ehader and footer bar 100% viewport width*/
+    }
+    .main{
+        min-width: 60vw;       /*makes main section view on website page 65% viewport width */
+    }
+    .aside{
+        display:none;       /*this removes the aside column from webpage*/
+    }
+    .nav{
+        min-width:15vw;
+    }
+
+}
